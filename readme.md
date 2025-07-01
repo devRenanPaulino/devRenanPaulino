@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?lines=Olá,+eu+sou+o+Renan+Paulino!;Desenvolvedor+Front-End+em+formação.;Apaixonado+por+UI/UX+e+projetos+com+propósito.&center=true&width=1000&height=45&font=Fira%20Code&pause=1000&color=FFA500&vCenter=true" />
+  <img
+    src="https://readme-typing-svg.demolab.com?font=Fira+Code&duration=3000&pause=1000&color=FFA500&vCenter=true&width=1000&height=45&lines=Ol%C3%A1%2C+eu+sou+o+Renan+Paulino!;Desenvolvedor+Front-End+em+forma%C3%A7%C3%A3o.;Apaixonado+por+UI%2FUX+e+projetos+com+prop%C3%B3sito."
+    alt="Typing SVG"
+  />
 </p>
 
 # 🧑🏽‍💻 Renan Paulino
@@ -51,7 +54,7 @@ Leitor de **literatura clássica** (Dostoiévski ❤️), fã de **basquete**, e
 ## 🤝 Contato & Carreira
 
 <a href="https://www.linkedin.com/in/renansilvapaulino" target="_blank">
-  <img src="www.linkedin.com/in/renansilvapaulino" />
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
 </a>
 <a href="https://github.com/devRenanPaulino" target="_blank">
   <img src="https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white" />
@@ -64,4 +67,4 @@ Leitor de **literatura clássica** (Dostoiévski ❤️), fã de **basquete**, e
 
 ## 🐍 Snake Game contributions
 
-<img src="https://github.com/devRenanPaulino/devRenanPaulino/blob/output/github-contribution-grid-snake.svg" alt="snake eating my commits">
+<img src="https://raw.githubusercontent.com/devRenanPaulino/devRenanPaulino/output/github-contribution-grid-snake.svg" alt="snake eating my commits"/>
