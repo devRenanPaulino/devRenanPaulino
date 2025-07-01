@@ -63,8 +63,3 @@ Leitor de **literatura clássica** (Dostoiévski ❤️), fã de **basquete**, e
   <img src="https://img.shields.io/badge/Mapa%20de%20Carreira-FFA500?style=for-the-badge&logo=target&logoColor=white" />
 </a>
 
----
-
-## 🐍 Snake Game contributions
-
-<img src="https://raw.githubusercontent.com/devRenanPaulino/devRenanPaulino/main/github-contribution-grid-snake-dark.svg" alt="snake dark mode" alt="meus commits"/>
