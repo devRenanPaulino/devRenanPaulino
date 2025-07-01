@@ -67,4 +67,4 @@ Leitor de **literatura clássica** (Dostoiévski ❤️), fã de **basquete**, e
 
 ## 🐍 Snake Game contributions
 
-<img src="https://raw.githubusercontent.com/devRenanPaulino/devRenanPaulino/output/github-contribution-grid-snake.svg" alt="snake eating my commits"/>
+<img src="https://raw.githubusercontent.com/devRenanPaulino/devRenanPaulino/main/github-contribution-grid-snake-dark.svg" alt="snake dark mode" alt="meus commits"/>
