@@ -7,9 +7,9 @@
 
 # 🧑🏽‍💻 Renan Paulino
 
-**Desenvolvedor Front-End em formação | Criador de experiências digitais com propósito**
+**Desenvolvedor em formação | Criador de experiências digitais com propósito**
 
-Sou um desenvolvedor em constante evolução, focado em interfaces **modernas**, **acessíveis** e **funcionais**. Trabalho com **HTML · CSS · JavaScript · React · Tailwind**, sempre mirando uma experiência que una **estética**, **usabilidade** e **inovação**.
+Sou um desenvolvedor em constante evolução, focado em interfaces **modernas**, **acessíveis** e **funcionais**. Trabalho com **JavaScript · React · Tailwind · Java e Python**, sempre mirando uma experiência que una **estética**, **usabilidade** e **inovação**.
 
 > ✨ Para mim, a programação é o meio — o impacto real está na experiência de quem usa.
 
@@ -29,6 +29,7 @@ Sou um desenvolvedor em constante evolução, focado em interfaces **modernas**,
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" title="Figma" width="32"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" title="Vite" width="32"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" title="Java" width="32"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" title="Python" width="32"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" title="MySQL" width="32"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg" title="Arduino" width="32"/>
 
