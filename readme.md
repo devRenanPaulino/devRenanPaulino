@@ -41,7 +41,8 @@ Sou um desenvolvedor em constante evolução, focado em interfaces **modernas**,
 
 <p align="left">
   <img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api?username=devRenanPaulino&show_icons=true&theme=tokyonight&locale=pt-br&hide_title=true" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=devRenanPaulino&theme=tokyonight&layout=compact&langs_count=6&hide_title=true" />
+  <img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=devRenanPaulino&theme=tokyonight&layout=compact&langs_count=6&hide_title=true" />
+  <img height="180em" src="https://streak-stats.demolab.com?user=devRenanPaulino&theme=tokyonight&hide_border=true" />
 </p>
 
 ---
