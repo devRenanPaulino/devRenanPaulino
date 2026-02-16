@@ -29,23 +29,30 @@
 <br/>
 
 <details>
-<summary><strong>More about me</strong></summary>
+<summary><strong>Mais sobre mim</strong></summary>
 
 <br/>
 
-Building tools that make developers' lives easier.
-Passionate about distributed systems, developer experience, and the open-source ecosystem.
+> Olá! Eu sou **Renan Paulino**, focado na criação de **experiências digitais, acessíveis e funcionais**.  
 
-**Currently at** Stellar Labs — San Francisco, CA
+Atualmente estou explorando **soluções front-end e back-end**.  
+
+**Paixões tech:** React, Tailwind, JavaScript, Python, Java e escrever código limpo e escalável.
+
+**Foco atual:** aprimorar minhas habilidades e contribuir para projetos que tenham **impacto real**.
+
+**Fora do código:** Literatura (Dostoiévski), e música com propósito (Emicida, BK, Sabotage, Kendrick Lamar).  
+
+**Atualmente em** São Paulo, SP
 </details>
 
 <br/>
 
 <div align="center">
-  <a href="mailto:nyx@stellarlabs.dev">
+  <a href="mailto:dev.renanpaulino@gmail.com">
     <img src="https://img.shields.io/badge/-Email-080c14?style=for-the-badge&logo=gmail&logoColor=00d4ff" alt="Email"/>
   </a>
-  <a href="https://www.linkedin.com/in/nyxorion/">
+  <a href="https://www.linkedin.com/in/renansilvapaulino/">
     <img src="https://img.shields.io/badge/-LinkedIn-080c14?style=for-the-badge&logo=linkedin&logoColor=a78bfa" alt="LinkedIn"/>
   </a>
 </div>

@@ -14,7 +14,7 @@ username: devRenanPaulino
 
 # Profile information displayed in the galaxy header
 profile:
-  name: "Nyx Orion"
+  name: "Renan Paulino"
   tagline: "Full Stack Developer in Progress | React • Java • Systems Thinking"
   company: "FIAP"
   location: "São Paulo, Brasil"
@@ -61,11 +61,11 @@ galaxy_arms:
 #   description: "..."        — Short description shown on the card
 projects:
   - repo: "Eleven-GS/Front-End-Eleven"
-    arm: 0
-    description: "Plataforma de curadoria de cursos voltado para industria 4.0"
-  - repo: "RivalixGaming/PlataformaRivalix-front-integracao"
     arm: 1
-    description: "Plataforma voltada para torneios de E-Sports."
+    description: "Projeto Fullstack: desenvolvi o back-end em Python integrando com a API Gemini (IA), fiz o UI/UX design da prototipagem e implementei o front-end."
+  - repo: "RivalixGaming/PlataformaRivalix-front-integracao"
+    arm: 0
+    description: "Participei do UI/UX design e desenvolvimento front-end completo, preparando a plataforma para integração com o back-end e funcionalidades de torneios de E-Sports."
 
 # Theme color overrides (optional — defaults to deep space palette)
 # All values must be valid hex color codes (#RRGGBB)
