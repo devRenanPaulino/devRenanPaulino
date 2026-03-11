@@ -63,27 +63,38 @@ class GitHubAPI:
         """Fetch stats via GraphQL for accurate counts including private contributions."""
         query = """
         query($username: String!) {
-          user(login: $username) {
-            repositoriesContributedTo(contributionTypes: [COMMIT, PULL_REQUEST, ISSUE]) {
-              totalCount
+        user(login: $username) {
+
+            repositoriesContributedTo(
+            contributionTypes: [COMMIT]
+            first: 100
+            ) {
+            totalCount
             }
+
             pullRequests {
-              totalCount
+            totalCount
             }
+
             issues {
-              totalCount
+            totalCount
             }
-            repositories(ownerAffiliations: OWNER, first: 100) {
-              totalCount
-              nodes {
+
+            repositories(
+            ownerAffiliations: [OWNER, ORGANIZATION_MEMBER, COLLABORATOR]
+            first: 100
+            ) {
+            totalCount
+            nodes {
                 stargazerCount
-              }
             }
+            }
+
             contributionsCollection {
-              totalCommitContributions
-              restrictedContributionsCount
+            totalCommitContributions
             }
-          }
+
+        }
         }
         """
         try:
@@ -111,10 +122,7 @@ class GitHubAPI:
         repos = user["repositories"]
 
         total_stars = sum(n["stargazerCount"] for n in repos["nodes"])
-        total_commits = (
-            contrib["totalCommitContributions"]
-            + contrib["restrictedContributionsCount"]
-        )
+        total_commits = contrib["totalCommitContributions"]
 
         return {
             "commits": total_commits,
