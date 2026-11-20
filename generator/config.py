@@ -63,6 +63,27 @@ def validate_config(config: dict) -> dict:
                 f"projects[{i}].arm must be an integer from 0 to {len(galaxy_arms) - 1}."
             )
 
+    # organizations — optional list of org logins included in the language chart
+    orgs = config.get("organizations", [])
+    if not isinstance(orgs, list) or not all(isinstance(o, str) and o for o in orgs):
+        raise ConfigError("'organizations' must be a list of organization logins.")
+    config["organizations"] = orgs
+
+    # mission_log — optional timeline of milestones
+    log = config.get("mission_log", [])
+    if not isinstance(log, list):
+        raise ConfigError("'mission_log' must be a list.")
+    for i, entry in enumerate(log):
+        if not isinstance(entry, dict) or not entry.get("title"):
+            raise ConfigError(f"mission_log[{i}] must be a mapping with a 'title'.")
+    config["mission_log"] = log
+
+    # bug_hunt — optional mini-game settings
+    hunt = config.get("bug_hunt", {})
+    if not isinstance(hunt, dict) or not isinstance(hunt.get("bugs", []), list):
+        raise ConfigError("'bug_hunt.bugs' must be a list of labels.")
+    config["bug_hunt"] = hunt
+
     # theme — optional, validate hex codes
     user_theme = config.get("theme", {})
     if not isinstance(user_theme, dict):

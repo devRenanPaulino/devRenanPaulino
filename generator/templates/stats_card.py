@@ -5,7 +5,7 @@ from generator.utils import METRIC_ICONS, METRIC_LABELS, METRIC_COLORS, format_n
 WIDTH, HEIGHT = 850, 180
 
 
-def render(stats: dict, metrics: list, theme: dict) -> str:
+def render(stats: dict, metrics: list, theme: dict, updated: str = None) -> str:
     """Render the stats card SVG.
 
     Args:
@@ -47,6 +47,12 @@ def render(stats: dict, metrics: list, theme: dict) -> str:
 
     cells_str = "\n".join(cells)
     dividers_str = "\n".join(dividers)
+    updated_svg = ""
+    if updated:
+        updated_svg = (
+            f'<text x="{WIDTH - 30}" y="38" fill="{theme["text_faint"]}" font-size="10" '
+            f'font-family="monospace" text-anchor="end" opacity="0.5">SYNC {updated}</text>'
+        )
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{HEIGHT}" viewBox="0 0 {WIDTH} {HEIGHT}">
   <defs>
@@ -70,6 +76,7 @@ def render(stats: dict, metrics: list, theme: dict) -> str:
 
   <!-- Section title -->
   <text x="30" y="38" fill="{theme['text_faint']}" font-size="11" font-family="monospace" letter-spacing="3">MISSION TELEMETRY</text>
+  {updated_svg}
 
   <!-- Dividers -->
 {dividers_str}

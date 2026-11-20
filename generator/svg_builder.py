@@ -1,6 +1,13 @@
 """SVG Builder — orchestrator connecting config, stats, and templates."""
 
-from generator.templates import galaxy_header, stats_card, tech_stack, projects_constellation
+from generator.templates import (
+    galaxy_header,
+    stats_card,
+    tech_stack,
+    projects_constellation,
+    mission_log,
+    bug_hunt,
+)
 
 
 class SVGBuilder:
@@ -10,10 +17,11 @@ class SVGBuilder:
     which resolves theme defaults and applies missing optional fields.
     """
 
-    def __init__(self, config: dict, stats: dict, languages: dict):
+    def __init__(self, config: dict, stats: dict, languages: dict, stats_updated: str = None):
         self.config = config
         self.stats = stats
         self.languages = languages
+        self.stats_updated = stats_updated
         self.theme = config["theme"]
         self.galaxy_arms = config.get("galaxy_arms", [])
         self.projects = config.get("projects", [])
@@ -32,6 +40,7 @@ class SVGBuilder:
             stats=self.stats,
             metrics=metrics,
             theme=self.theme,
+            updated=self.stats_updated,
         )
 
     def render_tech_stack(self) -> str:
@@ -48,5 +57,18 @@ class SVGBuilder:
         return projects_constellation.render(
             projects=self.projects,
             galaxy_arms=self.galaxy_arms,
+            theme=self.theme,
+        )
+
+    def render_mission_log(self) -> str:
+        return mission_log.render(
+            entries=self.config.get("mission_log", []),
+            galaxy_arms=self.galaxy_arms,
+            theme=self.theme,
+        )
+
+    def render_bug_hunt(self) -> str:
+        return bug_hunt.render(
+            bugs=self.config.get("bug_hunt", {}).get("bugs", []),
             theme=self.theme,
         )

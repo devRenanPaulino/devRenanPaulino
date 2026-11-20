@@ -1,0 +1,29 @@
+{
+  "languages": {
+    "C": 344,
+    "C#": 55477,
+    "C++": 8598,
+    "CSS": 398883,
+    "Dart": 519638,
+    "Dockerfile": 5381,
+    "HTML": 442752,
+    "Java": 989639,
+    "JavaScript": 329163,
+    "Jupyter Notebook": 270293,
+    "Kotlin": 122,
+    "Mermaid": 2500,
+    "Objective-C": 38,
+    "PLSQL": 71896,
+    "Python": 406285,
+    "Shell": 21236,
+    "Swift": 900,
+    "TypeScript": 1817698
+  },
+  "stats": {
+    "commits": 348,
+    "issues": 0,
+    "prs": 63,
+    "repos": 47,
+    "stars": 1
+  }
+}

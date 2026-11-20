@@ -15,44 +15,54 @@ username: devRenanPaulino
 # Profile information displayed in the galaxy header
 profile:
   name: "Renan Paulino"
-  tagline: "Full Stack Developer in Progress | React • Java • Systems Thinking"
-  company: "FIAP"
+  tagline: "AI Engineer em formação | Python • Copilot SDK • Machine Learning • FastAPI • React"
+  company: "VivoHost"
   location: "São Paulo, Brasil"
   bio: |
-    Estudante de Análise e Desenvolvimento de Sistemas.
-    Busco construir soluções que unam estética, usabilidade e acessibilidade, sempre atento a boas práticas e tendências do mercado.
-    Evoluindo do frontend para backend com foco em arquitetura e qualidade de código.
+    Estagiário na VivoHost (Tech Enabler, diretoria de Finanças e Jurídico) e estudante de Análise e Desenvolvimento de Sistemas na FIAP.
+    No trabalho, integrações com o Copilot SDK, React/Next.js e Python/FastAPI; na faculdade, Java/Spring Boot e Dart/Flutter.
+    Busco unir estética, usabilidade e acessibilidade com arquitetura e qualidade de código.
   philosophy: '"Acredito que a programação é um meio — o verdadeiro impacto está na experiência que podemos transmitir."'
 
 # Social links displayed at the bottom of the profile
 social:
   email: "dev.renanpaulino@gmail.com"
   linkedin: "Renan Paulino"
-  website: "https://devrenanpaulino.github.io/Portifolio-Origamid/"
+  website: "https://devrenanpaulino.github.io/portifolio-renanpaulino/"
 
 # Galaxy arms represent your core focus areas
 # Each arm spirals out from the center with its own color and tech items
 # Available colors: "synapse_cyan", "dendrite_violet", "axon_amber"
 galaxy_arms:
-  - name: "Frontend Engineering"
+  - name: "Frontend & Mobile"
     color: "synapse_cyan"
     items:
       - "React"
+      - "Next.js"
       - "TypeScript"
-      - "JavaScript"
       - "Tailwind"
+      - "Flutter"
+      - "Dart"
       - "UI/UX"
-      - "CSS3"
-      - "HTML5"
-  - name: "Backend & Data"
+  - name: "Backend & Cloud"
     color: "dendrite_violet"
     items:
       - "Python"
+      - "FastAPI"
       - "Java"
-      - "SQLite"
-      - "Oracle Developer"
-      - "REST APIs"
-      - "OOP"
+      - "Spring Boot"
+      - "C# / .NET"
+      - "Oracle SQL"
+      - "Microservices"
+      - "DevOps"
+  - name: "AI & Data"
+    color: "axon_amber"
+    items:
+      - "Machine Learning"
+      - "scikit-learn"
+      - "Jupyter"
+      - "Copilot SDK"
+      - "SDK Integrations"
 
 # Featured projects shown as constellation stars
 # Each project needs:
@@ -60,12 +70,51 @@ galaxy_arms:
 #   arm: 0-2                  — Which galaxy arm to associate with (index)
 #   description: "..."        — Short description shown on the card
 projects:
-  - repo: "Eleven-GS/Front-End-Eleven"
-    arm: 1
-    description: "Projeto Fullstack: desenvolvi o back-end em Python integrando com a API Gemini (IA), fiz o UI/UX design da prototipagem e implementei o front-end."
-  - repo: "RivalixGaming/PlataformaRivalix-front-integracao"
+  - repo: "NexaGS/fe-nexa-app"
     arm: 0
-    description: "Participei do UI/UX design e desenvolvimento front-end completo, preparando a plataforma para integração com o back-end e funcionalidades de torneios de E-Sports."
+    description: "App Flutter: tempo de espera em clínicas"
+  - repo: "TdB-PlataformaRaizDoBem/Raiz-do-Bem"
+    arm: 0
+    description: "Front React/TS da plataforma Turma do Bem"
+  - repo: "TdB-PlataformaRaizDoBem/ms-vulnerability-map"
+    arm: 2
+    description: "FastAPI + IBGE + ML: vulnerabilidade por UF"
+  - repo: "devRenanPaulino/ms-sandbox-manager"
+    arm: 1
+    description: "FastAPI + Twilio: WhatsApp para a ONG"
+
+# Mission log: timeline of milestones (up to 7). arm = galaxy arm index for the color
+mission_log:
+  - when: "2025 · 1º SEM"
+    title: "PROPROFISSÃO"
+    detail: "Programa de formação"
+    arm: 0
+  - when: "2025 · 2º SEM"
+    title: "FIAP · ADS"
+    detail: "Análise e Desenv. de Sistemas"
+    arm: 1
+  - when: "2025–26"
+    title: "Raiz do Bem"
+    detail: "React + MS WhatsApp"
+    arm: 0
+  - when: "2026 · ATUAL"
+    title: "Challenge Amazul"
+    detail: "FIAP · Spring Boot, .NET, Oracle"
+    arm: 1
+    current: true
+  - when: "NOV 2026"
+    title: "Nexa"
+    detail: "Global Solution · Flutter"
+    arm: 0
+
+# Bug Hunt mini-game: labels of the bugs the ship squashes (3 to 6)
+bug_hunt:
+  bugs:
+    - "NullPointer"
+    - "undefined"
+    - "CORS"
+    - "404"
+    - "Merge Conflict"
 
 # Theme color overrides (optional — defaults to deep space palette)
 # All values must be valid hex color codes (#RRGGBB)
@@ -89,6 +138,12 @@ stats:
     - "issues"
     - "repos"
 
+# Organizations whose public repos count toward the languages chart
+organizations:
+  - "TdB-PlataformaRaizDoBem"
+  - "NexaGS"
+  - "CHALLENGE-AMAZUL"
+
 # Language display settings
 languages:
   exclude: # Languages to hide from the telemetry chart
@@ -96,4 +151,5 @@ languages:
     - "CSS"
     - "Shell"
     - "Makefile"
+    - "Mermaid"
   max_display: 8 # Maximum number of languages to show

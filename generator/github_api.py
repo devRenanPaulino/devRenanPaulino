@@ -15,8 +15,11 @@ class GitHubAPI:
     GRAPHQL_URL = "https://api.github.com/graphql"
     REST_URL = "https://api.github.com"
 
-    def __init__(self, username: str, token: str = None):
+    def __init__(self, username: str, token: str = None, orgs: list = None):
         self.username = username
+        self.orgs = orgs or []
+        self.stats_source = None  # "graphql" (accurate) or "rest" (approximate)
+        self.language_errors = 0
         self.token = token or os.environ.get("GITHUB_TOKEN", "")
         self.headers = {"Accept": "application/vnd.github.v3+json"}
         if self.token:
@@ -63,27 +66,38 @@ class GitHubAPI:
         """Fetch stats via GraphQL for accurate counts including private contributions."""
         query = """
         query($username: String!) {
-          user(login: $username) {
-            repositoriesContributedTo(contributionTypes: [COMMIT, PULL_REQUEST, ISSUE]) {
-              totalCount
+        user(login: $username) {
+
+            repositoriesContributedTo(
+            contributionTypes: [COMMIT]
+            first: 100
+            ) {
+            totalCount
             }
+
             pullRequests {
-              totalCount
+            totalCount
             }
+
             issues {
-              totalCount
+            totalCount
             }
-            repositories(ownerAffiliations: OWNER, first: 100) {
-              totalCount
-              nodes {
+
+            repositories(
+            ownerAffiliations: [OWNER, ORGANIZATION_MEMBER, COLLABORATOR]
+            first: 100
+            ) {
+            totalCount
+            nodes {
                 stargazerCount
-              }
             }
+            }
+
             contributionsCollection {
-              totalCommitContributions
-              restrictedContributionsCount
+            totalCommitContributions
             }
-          }
+
+        }
         }
         """
         try:
@@ -111,11 +125,9 @@ class GitHubAPI:
         repos = user["repositories"]
 
         total_stars = sum(n["stargazerCount"] for n in repos["nodes"])
-        total_commits = (
-            contrib["totalCommitContributions"]
-            + contrib["restrictedContributionsCount"]
-        )
+        total_commits = contrib["totalCommitContributions"]
 
+        self.stats_source = "graphql"
         return {
             "commits": total_commits,
             "stars": total_stars,
@@ -126,6 +138,7 @@ class GitHubAPI:
 
     def _fetch_stats_rest(self) -> dict:
         """Fallback: fetch stats via REST API (public data only)."""
+        self.stats_source = "rest"
         user_resp = self._request(
             "GET", f"{self.REST_URL}/users/{self.username}"
         )
@@ -198,28 +211,63 @@ class GitHubAPI:
             logger.warning("Search API failed for '%s': %s", query, e)
         return 0
 
+    def _paginate_org_repos(self, org: str):
+        """Yield pages of public repos for an organization."""
+        page = 1
+        while True:
+            resp = self._request(
+                "GET",
+                f"{self.REST_URL}/orgs/{org}/repos",
+                params={"per_page": 100, "page": page, "type": "public"},
+            )
+            if resp.status_code != 200:
+                logger.warning("Could not list repos for org %s (HTTP %d)", org, resp.status_code)
+                self.language_errors += 1
+                return
+            repos = resp.json()
+            if not repos:
+                break
+            yield repos
+            if len(repos) < 100:
+                break
+            page += 1
+
+    def _iter_language_repos(self):
+        """Yield non-fork repos from the user account and the configured orgs."""
+        seen = set()
+        sources = [self._paginate_repos()]
+        sources += [self._paginate_org_repos(org) for org in self.orgs]
+        for source in sources:
+            for repos in source:
+                for repo in repos:
+                    name = repo.get("full_name")
+                    if repo.get("fork") or name in seen:
+                        continue
+                    seen.add(name)
+                    yield repo
+
     def fetch_languages(self) -> dict:
-        """Fetch language byte counts aggregated across all owned non-fork repos."""
+        """Fetch language byte counts across owned non-fork repos and configured orgs."""
         languages = {}
-        for repos in self._paginate_repos():
-            for repo in repos:
-                if repo.get("fork"):
-                    continue
-                try:
-                    lang_resp = self._request("GET", repo["languages_url"])
-                    if lang_resp.status_code == 200:
-                        for lang, bytes_count in lang_resp.json().items():
-                            languages[lang] = languages.get(lang, 0) + bytes_count
-                    else:
-                        logger.warning(
-                            "Could not fetch languages for %s (HTTP %d)",
-                            repo.get("full_name", "unknown"),
-                            lang_resp.status_code,
-                        )
-                except requests.exceptions.RequestException as e:
+        self.language_errors = 0
+        for repo in self._iter_language_repos():
+            try:
+                lang_resp = self._request("GET", repo["languages_url"])
+                if lang_resp.status_code == 200:
+                    for lang, bytes_count in lang_resp.json().items():
+                        languages[lang] = languages.get(lang, 0) + bytes_count
+                else:
+                    self.language_errors += 1
                     logger.warning(
-                        "Error fetching languages for %s: %s",
+                        "Could not fetch languages for %s (HTTP %d)",
                         repo.get("full_name", "unknown"),
-                        e,
+                        lang_resp.status_code,
                     )
+            except requests.exceptions.RequestException as e:
+                self.language_errors += 1
+                logger.warning(
+                    "Error fetching languages for %s: %s",
+                    repo.get("full_name", "unknown"),
+                    e,
+                )
         return languages

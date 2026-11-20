@@ -1,9 +1,11 @@
 """Entry point for the Galaxy Profile README generator."""
 
 import argparse
+import json
 import logging
 import os
 import sys
+from datetime import datetime, timezone
 
 import requests
 import yaml
@@ -25,6 +27,26 @@ DEMO_LANGUAGES = {
     "Dockerfile": 15000,
     "CSS": 10000,
 }
+
+
+CACHE_PATH = os.path.join(os.path.dirname(__file__), "..", "assets", "generated", "cache.json")
+
+
+def _load_cache() -> dict:
+    """Last good stats/languages, so a failed or token-less run never shows zeros."""
+    try:
+        with open(CACHE_PATH, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return data if isinstance(data, dict) else {}
+    except (OSError, ValueError):
+        return {}
+
+
+def _save_cache(cache: dict) -> None:
+    os.makedirs(os.path.dirname(CACHE_PATH), exist_ok=True)
+    with open(CACHE_PATH, "w", encoding="utf-8") as f:
+        json.dump(cache, f, indent=2, sort_keys=True, ensure_ascii=False)
+        f.write("\n")
 
 
 def generate(args):
@@ -63,33 +85,58 @@ def generate(args):
 
     logger.info("Generating profile SVGs for @%s...", username)
 
+    stats_date = None
     if demo:
         logger.info("Demo mode: using hardcoded stats and languages.")
         stats = DEMO_STATS
         languages = DEMO_LANGUAGES
     else:
-        # Fetch GitHub data
-        api = GitHubAPI(username)
+        api = GitHubAPI(username, orgs=config.get("organizations", []))
+        cache = _load_cache()
+        today = datetime.now(timezone.utc).date().isoformat()
 
         logger.info("Fetching stats...")
+        stats = None
         try:
             stats = api.fetch_stats()
         except (requests.exceptions.RequestException, ValueError, KeyError) as e:
-            logger.warning("Could not fetch stats (%s). Using defaults.", e)
+            logger.warning("Could not fetch stats (%s).", e)
+
+        # The REST fallback (no token) undercounts commits and issues, so only
+        # trust it when there is nothing better cached.
+        if stats is not None and (api.stats_source == "graphql" or not cache.get("stats")):
+            cache["stats"] = stats
+            cache["stats_updated"] = today
+            stats_date = today
+        elif cache.get("stats"):
+            logger.warning("Using cached stats (last good fetch: %s).", cache.get("stats_updated", "unknown"))
+            stats = cache["stats"]
+            stats_date = cache.get("stats_updated")
+        else:
             stats = {"commits": 0, "stars": 0, "prs": 0, "issues": 0, "repos": 0}
 
         logger.info("Fetching languages...")
+        languages = None
         try:
             languages = api.fetch_languages()
         except (requests.exceptions.RequestException, ValueError, KeyError) as e:
-            logger.warning("Could not fetch languages (%s). Using defaults.", e)
-            languages = {}
+            logger.warning("Could not fetch languages (%s).", e)
+
+        if languages and api.language_errors == 0:
+            cache["languages"] = languages
+        elif cache.get("languages"):
+            logger.warning("Languages incomplete (%d errors); using cached languages.", api.language_errors)
+            languages = cache["languages"]
+        else:
+            languages = languages or {}
+
+        _save_cache(cache)
 
     logger.info("Stats: %s", stats)
     logger.info("Languages: %d found", len(languages))
 
     # Build SVGs
-    builder = SVGBuilder(config, stats, languages)
+    builder = SVGBuilder(config, stats, languages, stats_updated=stats_date)
     output_dir = os.path.join(os.path.dirname(__file__), "..", "assets", "generated")
     os.makedirs(output_dir, exist_ok=True)
 
@@ -98,6 +145,8 @@ def generate(args):
         "stats-card.svg": builder.render_stats_card(),
         "tech-stack.svg": builder.render_tech_stack(),
         "projects-constellation.svg": builder.render_projects_constellation(),
+        "mission-log.svg": builder.render_mission_log(),
+        "bug-hunt.svg": builder.render_bug_hunt(),
     }
 
     for filename, content in svgs.items():
@@ -106,7 +155,7 @@ def generate(args):
             f.write(content)
         logger.info("Wrote %s", path)
 
-    logger.info("Done! 4 SVGs generated.")
+    logger.info("Done! %d SVGs generated.", len(svgs))
 
 
 def main():
