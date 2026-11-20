@@ -9,6 +9,10 @@ on:
       - "config.yml"
       - "generator/**"
 
+concurrency:
+  group: generate-profile
+  cancel-in-progress: false
+
 jobs:
   generate:
     name: Generate galaxy profile assets
@@ -29,8 +33,10 @@ jobs:
 
       - name: Generate SVGs
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python -m generator.main --main
+          # Optional: create a PROFILE_TOKEN secret (classic PAT with read:user and repo)
+          # to also count private contributions. Falls back to the default token.
+          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
+        run: python -m generator.main
 
       - name: Commit and push if changed
         run: |
@@ -39,5 +45,6 @@ jobs:
           git add assets/generated/
           if ! git diff --staged --quiet; then
             git commit -m "chore: update profile SVGs [skip ci]"
+            git pull --rebase
             git push
           fi

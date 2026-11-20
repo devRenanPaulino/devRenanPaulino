@@ -28,6 +28,12 @@
 
 <br/>
 
+<div align="center">
+  <img src="./assets/generated/mission-log.svg" width="850" alt="Mission Log"/>
+</div>
+
+<br/>
+
 <details>
 <summary><strong>Mais sobre mim</strong></summary>
 
@@ -35,16 +41,22 @@
 
 > Olá! Eu sou **Renan Paulino**, focado na criação de **experiências digitais, acessíveis e funcionais**.  
 
-Atualmente estou explorando **soluções front-end e back-end**.  
+Estagiário na **VivoHost**, no time de Tech Enabler da diretoria de Finanças e Jurídico, e estudante de ADS na **FIAP**. No trabalho, integrações com o Copilot SDK, React/Next.js e Python/FastAPI; na faculdade, Java/Spring Boot, Flutter e .NET.
 
-**Paixões tech:** React, Tailwind, JavaScript, Python, Java e escrever código limpo e escalável.
+**Paixões tech:** IA aplicada, Python, SDKs e integrações, React, Java, Flutter e escrever código limpo e escalável.
 
-**Foco atual:** aprimorar minhas habilidades e contribuir para projetos que tenham **impacto real**.
+**Foco atual:** aprimorar minhas habilidades e contribuir para projetos que tenham **impacto real**, como o Raiz do Bem, onde atuei no front-end em React, desenvolvido com a ONG Turma do Bem.
 
 **Fora do código:** Literatura (Dostoiévski), e música com propósito (Emicida, BK, Sabotage, Kendrick Lamar).  
 
 **Atualmente em** São Paulo, SP
 </details>
+
+<br/>
+
+<div align="center">
+  <img src="./assets/generated/bug-hunt.svg" width="850" alt="Bug Hunt"/>
+</div>
 
 <br/>
 

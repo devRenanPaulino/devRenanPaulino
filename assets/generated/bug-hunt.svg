@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="220" viewBox="0 0 850 220">
+  <defs>
+    <filter id="hunt-glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="849" height="219" rx="12" ry="12"
+        fill="#0f1623" stroke="#1a2332" stroke-width="1"/>
+  <g opacity="0.4" fill="none" stroke="#64748b" stroke-width="1.5">
+    <polyline points="5,21 5,5 21,5"/>
+    <polyline points="829,5 845,5 845,21"/>
+    <polyline points="5,199 5,215 21,215"/>
+    <polyline points="829,215 845,215 845,199"/>
+  </g>
+  <circle cx="433.5" cy="166.1" r="0.4" fill="#94a3b8" opacity="0.25"><animate attributeName="opacity" values="0.25;0.75;0.25" dur="3.3s" repeatCount="indefinite"/></circle>
+  <circle cx="834.5" cy="160.2" r="0.5" fill="#94a3b8" opacity="0.15"><animate attributeName="opacity" values="0.15;0.46;0.15" dur="4.4s" repeatCount="indefinite"/></circle>
+  <circle cx="296.1" cy="130.4" r="0.4" fill="#94a3b8" opacity="0.17"><animate attributeName="opacity" values="0.17;0.50;0.17" dur="5.4s" repeatCount="indefinite"/></circle>
+  <circle cx="242.4" cy="174.4" r="0.5" fill="#94a3b8" opacity="0.14"><animate attributeName="opacity" values="0.14;0.42;0.14" dur="4.2s" repeatCount="indefinite"/></circle>
+  <circle cx="556.8" cy="111.3" r="0.7" fill="#94a3b8" opacity="0.18"><animate attributeName="opacity" values="0.18;0.54;0.18" dur="4.3s" repeatCount="indefinite"/></circle>
+  <circle cx="24.0" cy="156.3" r="0.9" fill="#94a3b8" opacity="0.18"><animate attributeName="opacity" values="0.18;0.55;0.18" dur="5.1s" repeatCount="indefinite"/></circle>
+  <circle cx="498.5" cy="114.5" r="0.9" fill="#94a3b8" opacity="0.26"><animate attributeName="opacity" values="0.26;0.79;0.26" dur="4.0s" repeatCount="indefinite"/></circle>
+  <circle cx="168.3" cy="198.6" r="1.1" fill="#94a3b8" opacity="0.17"><animate attributeName="opacity" values="0.17;0.51;0.17" dur="3.7s" repeatCount="indefinite"/></circle>
+  <circle cx="343.7" cy="175.6" r="0.3" fill="#94a3b8" opacity="0.10"><animate attributeName="opacity" values="0.10;0.30;0.10" dur="6.6s" repeatCount="indefinite"/></circle>
+  <circle cx="140.3" cy="123.6" r="0.8" fill="#94a3b8" opacity="0.31"><animate attributeName="opacity" values="0.31;0.80;0.31" dur="3.2s" repeatCount="indefinite"/></circle>
+  <circle cx="111.1" cy="70.0" r="0.8" fill="#94a3b8" opacity="0.18"><animate attributeName="opacity" values="0.18;0.53;0.18" dur="6.1s" repeatCount="indefinite"/></circle>
+  <circle cx="58.2" cy="158.1" r="0.9" fill="#94a3b8" opacity="0.31"><animate attributeName="opacity" values="0.31;0.80;0.31" dur="5.9s" repeatCount="indefinite"/></circle>
+  <circle cx="618.1" cy="128.2" r="0.7" fill="#94a3b8" opacity="0.22"><animate attributeName="opacity" values="0.22;0.65;0.22" dur="6.8s" repeatCount="indefinite"/></circle>
+  <circle cx="59.9" cy="180.6" r="1.0" fill="#94a3b8" opacity="0.23"><animate attributeName="opacity" values="0.23;0.68;0.23" dur="3.8s" repeatCount="indefinite"/></circle>
+  <circle cx="198.7" cy="195.0" r="0.3" fill="#94a3b8" opacity="0.13"><animate attributeName="opacity" values="0.13;0.39;0.13" dur="6.1s" repeatCount="indefinite"/></circle>
+  <circle cx="527.6" cy="155.1" r="0.9" fill="#94a3b8" opacity="0.20"><animate attributeName="opacity" values="0.20;0.59;0.20" dur="4.9s" repeatCount="indefinite"/></circle>
+  <circle cx="289.5" cy="151.7" r="0.9" fill="#94a3b8" opacity="0.17"><animate attributeName="opacity" values="0.17;0.51;0.17" dur="6.0s" repeatCount="indefinite"/></circle>
+  <circle cx="34.4" cy="108.2" r="0.6" fill="#94a3b8" opacity="0.16"><animate attributeName="opacity" values="0.16;0.47;0.16" dur="3.5s" repeatCount="indefinite"/></circle>
+  <circle cx="159.6" cy="149.4" r="0.6" fill="#94a3b8" opacity="0.22"><animate attributeName="opacity" values="0.22;0.65;0.22" dur="5.6s" repeatCount="indefinite"/></circle>
+  <circle cx="506.7" cy="110.3" r="0.7" fill="#94a3b8" opacity="0.13"><animate attributeName="opacity" values="0.13;0.40;0.13" dur="3.2s" repeatCount="indefinite"/></circle>
+  <circle cx="427.3" cy="184.1" r="0.8" fill="#94a3b8" opacity="0.12"><animate attributeName="opacity" values="0.12;0.35;0.12" dur="3.0s" repeatCount="indefinite"/></circle>
+  <circle cx="608.6" cy="203.1" r="0.7" fill="#94a3b8" opacity="0.17"><animate attributeName="opacity" values="0.17;0.50;0.17" dur="4.7s" repeatCount="indefinite"/></circle>
+  <circle cx="70.5" cy="142.6" r="0.9" fill="#94a3b8" opacity="0.27"><animate attributeName="opacity" values="0.27;0.80;0.27" dur="7.0s" repeatCount="indefinite"/></circle>
+  <circle cx="65.7" cy="171.0" r="0.5" fill="#94a3b8" opacity="0.22"><animate attributeName="opacity" values="0.22;0.65;0.22" dur="6.9s" repeatCount="indefinite"/></circle>
+  <circle cx="371.9" cy="196.2" r="0.3" fill="#94a3b8" opacity="0.25"><animate attributeName="opacity" values="0.25;0.75;0.25" dur="4.1s" repeatCount="indefinite"/></circle>
+  <circle cx="607.5" cy="55.6" r="0.3" fill="#94a3b8" opacity="0.30"><animate attributeName="opacity" values="0.30;0.80;0.30" dur="6.8s" repeatCount="indefinite"/></circle>
+  <circle cx="497.4" cy="90.5" r="0.5" fill="#94a3b8" opacity="0.29"><animate attributeName="opacity" values="0.29;0.80;0.29" dur="6.7s" repeatCount="indefinite"/></circle>
+  <circle cx="142.7" cy="124.4" r="0.4" fill="#94a3b8" opacity="0.21"><animate attributeName="opacity" values="0.21;0.63;0.21" dur="6.8s" repeatCount="indefinite"/></circle>
+  <circle cx="163.4" cy="120.4" r="1.0" fill="#94a3b8" opacity="0.34"><animate attributeName="opacity" values="0.34;0.80;0.34" dur="6.1s" repeatCount="indefinite"/></circle>
+  <circle cx="505.2" cy="207.1" r="0.8" fill="#94a3b8" opacity="0.11"><animate attributeName="opacity" values="0.11;0.34;0.11" dur="3.8s" repeatCount="indefinite"/></circle>
+
+  <text x="30" y="38" fill="#64748b" font-size="11" font-family="monospace" letter-spacing="3">BUG HUNT</text>
+  <text x="820" y="38" fill="#64748b" font-size="10" font-family="monospace" letter-spacing="1" text-anchor="end" opacity="0">SQUASHED 0/5<animate attributeName="opacity" calcMode="discrete" keyTimes="0.0000;0.1365;0.9365" values="1;0;1" dur="15.75s" repeatCount="indefinite"/></text>
+  <text x="820" y="38" fill="#64748b" font-size="10" font-family="monospace" letter-spacing="1" text-anchor="end" opacity="0">SQUASHED 1/5<animate attributeName="opacity" calcMode="discrete" keyTimes="0.0000;0.1365;0.2889" values="0;1;0" dur="15.75s" repeatCount="indefinite"/></text>
+  <text x="820" y="38" fill="#64748b" font-size="10" font-family="monospace" letter-spacing="1" text-anchor="end" opacity="0">SQUASHED 2/5<animate attributeName="opacity" calcMode="discrete" keyTimes="0.0000;0.2889;0.4413" values="0;1;0" dur="15.75s" repeatCount="indefinite"/></text>
+  <text x="820" y="38" fill="#64748b" font-size="10" font-family="monospace" letter-spacing="1" text-anchor="end" opacity="0">SQUASHED 3/5<animate attributeName="opacity" calcMode="discrete" keyTimes="0.0000;0.4413;0.5937" values="0;1;0" dur="15.75s" repeatCount="indefinite"/></text>
+  <text x="820" y="38" fill="#64748b" font-size="10" font-family="monospace" letter-spacing="1" text-anchor="end" opacity="0">SQUASHED 4/5<animate attributeName="opacity" calcMode="discrete" keyTimes="0.0000;0.5937;0.7460" values="0;1;0" dur="15.75s" repeatCount="indefinite"/></text>
+  <text x="820" y="38" fill="#64748b" font-size="10" font-family="monospace" letter-spacing="1" text-anchor="end" opacity="0">SQUASHED 5/5<animate attributeName="opacity" calcMode="discrete" keyTimes="0.0000;0.7460;0.9365" values="0;1;0" dur="15.75s" repeatCount="indefinite"/></text>
+
+  <line x1="12" y1="206" x2="838" y2="206" stroke="#64748b" stroke-width="0.5" stroke-dasharray="4,8" opacity="0.25"/>
+
+  <!-- Bugs -->
+  <g transform="translate(110.0 96)">
+    <animate attributeName="opacity" calcMode="discrete" keyTimes="0.0000;0.1365;0.9365" values="1;0;1" dur="15.75s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 7;0 0" dur="1.8s" begin="-0.00s" repeatCount="indefinite"/>
+      <path d="M-10 4 L-20 10 M-12 -1 L-23 -3 M-9 -6 L-18 -12 M10 4 L20 10 M12 -1 L23 -3 M9 -6 L18 -12 M-4 -9 L-8 -17 M4 -9 L8 -17" stroke="#ffb020" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.85"/>
+      <ellipse rx="13" ry="10" fill="#ffb020" opacity="0.92"/>
+      <circle cx="-5" cy="-3" r="2.8" fill="#080c14"/>
+      <circle cx="5" cy="-3" r="2.8" fill="#080c14"/>
+      <circle cx="-4.4" cy="-3.4" r="1" fill="#ffffff"/>
+      <circle cx="5.6" cy="-3.4" r="1" fill="#ffffff"/>
+      <text y="32" fill="#94a3b8" font-size="10" font-family="monospace" text-anchor="middle">NullPointer</text>
+    </g>
+  </g>
+  <g transform="translate(267.5 96)">
+    <animate attributeName="opacity" calcMode="discrete" keyTimes="0.0000;0.4413;0.9365" values="1;0;1" dur="15.75s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 7;0 0" dur="1.8s" begin="-0.45s" repeatCount="indefinite"/>
+      <path d="M-10 4 L-20 10 M-12 -1 L-23 -3 M-9 -6 L-18 -12 M10 4 L20 10 M12 -1 L23 -3 M9 -6 L18 -12 M-4 -9 L-8 -17 M4 -9 L8 -17" stroke="#ffb020" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.85"/>
+      <ellipse rx="13" ry="10" fill="#ffb020" opacity="0.92"/>
+      <circle cx="-5" cy="-3" r="2.8" fill="#080c14"/>
+      <circle cx="5" cy="-3" r="2.8" fill="#080c14"/>
+      <circle cx="-4.4" cy="-3.4" r="1" fill="#ffffff"/>
+      <circle cx="5.6" cy="-3.4" r="1" fill="#ffffff"/>
+      <text y="32" fill="#94a3b8" font-size="10" font-family="monospace" text-anchor="middle">undefined</text>
+    </g>
+  </g>
+  <g transform="translate(425.0 96)">
+    <animate attributeName="opacity" calcMode="discrete" keyTimes="0.0000;0.7460;0.9365" values="1;0;1" dur="15.75s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 7;0 0" dur="1.8s" begin="-0.90s" repeatCount="indefinite"/>
+      <path d="M-10 4 L-20 10 M-12 -1 L-23 -3 M-9 -6 L-18 -12 M10 4 L20 10 M12 -1 L23 -3 M9 -6 L18 -12 M-4 -9 L-8 -17 M4 -9 L8 -17" stroke="#ffb020" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.85"/>
+      <ellipse rx="13" ry="10" fill="#ffb020" opacity="0.92"/>
+      <circle cx="-5" cy="-3" r="2.8" fill="#080c14"/>
+      <circle cx="5" cy="-3" r="2.8" fill="#080c14"/>
+      <circle cx="-4.4" cy="-3.4" r="1" fill="#ffffff"/>
+      <circle cx="5.6" cy="-3.4" r="1" fill="#ffffff"/>
+      <text y="32" fill="#94a3b8" font-size="10" font-family="monospace" text-anchor="middle">CORS</text>
+    </g>
+  </g>
+  <g transform="translate(582.5 96)">
+    <animate attributeName="opacity" calcMode="discrete" keyTimes="0.0000;0.5937;0.9365" values="1;0;1" dur="15.75s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 7;0 0" dur="1.8s" begin="-1.35s" repeatCount="indefinite"/>
+      <path d="M-10 4 L-20 10 M-12 -1 L-23 -3 M-9 -6 L-18 -12 M10 4 L20 10 M12 -1 L23 -3 M9 -6 L18 -12 M-4 -9 L-8 -17 M4 -9 L8 -17" stroke="#ffb020" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.85"/>
+      <ellipse rx="13" ry="10" fill="#ffb020" opacity="0.92"/>
+      <circle cx="-5" cy="-3" r="2.8" fill="#080c14"/>
+      <circle cx="5" cy="-3" r="2.8" fill="#080c14"/>
+      <circle cx="-4.4" cy="-3.4" r="1" fill="#ffffff"/>
+      <circle cx="5.6" cy="-3.4" r="1" fill="#ffffff"/>
+      <text y="32" fill="#94a3b8" font-size="10" font-family="monospace" text-anchor="middle">404</text>
+    </g>
+  </g>
+  <g transform="translate(740.0 96)">
+    <animate attributeName="opacity" calcMode="discrete" keyTimes="0.0000;0.2889;0.9365" values="1;0;1" dur="15.75s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 7;0 0" dur="1.8s" begin="-1.80s" repeatCount="indefinite"/>
+      <path d="M-10 4 L-20 10 M-12 -1 L-23 -3 M-9 -6 L-18 -12 M10 4 L20 10 M12 -1 L23 -3 M9 -6 L18 -12 M-4 -9 L-8 -17 M4 -9 L8 -17" stroke="#ffb020" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.85"/>
+      <ellipse rx="13" ry="10" fill="#ffb020" opacity="0.92"/>
+      <circle cx="-5" cy="-3" r="2.8" fill="#080c14"/>
+      <circle cx="5" cy="-3" r="2.8" fill="#080c14"/>
+      <circle cx="-4.4" cy="-3.4" r="1" fill="#ffffff"/>
+      <circle cx="5.6" cy="-3.4" r="1" fill="#ffffff"/>
+      <text y="32" fill="#94a3b8" font-size="10" font-family="monospace" text-anchor="middle">Merge Conflict</text>
+    </g>
+  </g>
+
+  <!-- Lasers and explosions -->
+  <line x1="110.0" y1="162" x2="110.0" y2="110" stroke="#00d4ff" stroke-width="3" stroke-linecap="round" opacity="0"><animate attributeName="opacity" calcMode="discrete" keyTimes="0.0000;0.1206;0.1365" values="0;1;0" dur="15.75s" repeatCount="indefinite"/></line>
+  <line x1="267.5" y1="162" x2="267.5" y2="110" stroke="#00d4ff" stroke-width="3" stroke-linecap="round" opacity="0"><animate attributeName="opacity" calcMode="discrete" keyTimes="0.0000;0.4254;0.4413" values="0;1;0" dur="15.75s" repeatCount="indefinite"/></line>
+  <line x1="425.0" y1="162" x2="425.0" y2="110" stroke="#00d4ff" stroke-width="3" stroke-linecap="round" opacity="0"><animate attributeName="opacity" calcMode="discrete" keyTimes="0.0000;0.7302;0.7460" values="0;1;0" dur="15.75s" repeatCount="indefinite"/></line>
+  <line x1="582.5" y1="162" x2="582.5" y2="110" stroke="#00d4ff" stroke-width="3" stroke-linecap="round" opacity="0"><animate attributeName="opacity" calcMode="discrete" keyTimes="0.0000;0.5778;0.5937" values="0;1;0" dur="15.75s" repeatCount="indefinite"/></line>
+  <line x1="740.0" y1="162" x2="740.0" y2="110" stroke="#00d4ff" stroke-width="3" stroke-linecap="round" opacity="0"><animate attributeName="opacity" calcMode="discrete" keyTimes="0.0000;0.2730;0.2889" values="0;1;0" dur="15.75s" repeatCount="indefinite"/></line>
+  <circle cx="110.0" cy="96" r="0" fill="#ffb020" opacity="0"><animate attributeName="r" keyTimes="0;0.1365;0.1714;1" values="0;0;30;30" dur="15.75s" repeatCount="indefinite"/><animate attributeName="opacity" keyTimes="0;0.1365;0.1714;1" values="0;0.9;0;0" dur="15.75s" repeatCount="indefinite"/></circle>
+  <circle cx="110.0" cy="96" r="0" fill="none" stroke="#a78bfa" stroke-width="2" opacity="0"><animate attributeName="r" keyTimes="0;0.1365;0.1714;1" values="0;0;42;42" dur="15.75s" repeatCount="indefinite"/><animate attributeName="opacity" keyTimes="0;0.1365;0.1714;1" values="0;0.8;0;0" dur="15.75s" repeatCount="indefinite"/></circle>
+  <circle cx="267.5" cy="96" r="0" fill="#ffb020" opacity="0"><animate attributeName="r" keyTimes="0;0.4413;0.4762;1" values="0;0;30;30" dur="15.75s" repeatCount="indefinite"/><animate attributeName="opacity" keyTimes="0;0.4413;0.4762;1" values="0;0.9;0;0" dur="15.75s" repeatCount="indefinite"/></circle>
+  <circle cx="267.5" cy="96" r="0" fill="none" stroke="#a78bfa" stroke-width="2" opacity="0"><animate attributeName="r" keyTimes="0;0.4413;0.4762;1" values="0;0;42;42" dur="15.75s" repeatCount="indefinite"/><animate attributeName="opacity" keyTimes="0;0.4413;0.4762;1" values="0;0.8;0;0" dur="15.75s" repeatCount="indefinite"/></circle>
+  <circle cx="425.0" cy="96" r="0" fill="#ffb020" opacity="0"><animate attributeName="r" keyTimes="0;0.7460;0.7810;1" values="0;0;30;30" dur="15.75s" repeatCount="indefinite"/><animate attributeName="opacity" keyTimes="0;0.7460;0.7810;1" values="0;0.9;0;0" dur="15.75s" repeatCount="indefinite"/></circle>
+  <circle cx="425.0" cy="96" r="0" fill="none" stroke="#a78bfa" stroke-width="2" opacity="0"><animate attributeName="r" keyTimes="0;0.7460;0.7810;1" values="0;0;42;42" dur="15.75s" repeatCount="indefinite"/><animate attributeName="opacity" keyTimes="0;0.7460;0.7810;1" values="0;0.8;0;0" dur="15.75s" repeatCount="indefinite"/></circle>
+  <circle cx="582.5" cy="96" r="0" fill="#ffb020" opacity="0"><animate attributeName="r" keyTimes="0;0.5937;0.6286;1" values="0;0;30;30" dur="15.75s" repeatCount="indefinite"/><animate attributeName="opacity" keyTimes="0;0.5937;0.6286;1" values="0;0.9;0;0" dur="15.75s" repeatCount="indefinite"/></circle>
+  <circle cx="582.5" cy="96" r="0" fill="none" stroke="#a78bfa" stroke-width="2" opacity="0"><animate attributeName="r" keyTimes="0;0.5937;0.6286;1" values="0;0;42;42" dur="15.75s" repeatCount="indefinite"/><animate attributeName="opacity" keyTimes="0;0.5937;0.6286;1" values="0;0.8;0;0" dur="15.75s" repeatCount="indefinite"/></circle>
+  <circle cx="740.0" cy="96" r="0" fill="#ffb020" opacity="0"><animate attributeName="r" keyTimes="0;0.2889;0.3238;1" values="0;0;30;30" dur="15.75s" repeatCount="indefinite"/><animate attributeName="opacity" keyTimes="0;0.2889;0.3238;1" values="0;0.9;0;0" dur="15.75s" repeatCount="indefinite"/></circle>
+  <circle cx="740.0" cy="96" r="0" fill="none" stroke="#a78bfa" stroke-width="2" opacity="0"><animate attributeName="r" keyTimes="0;0.2889;0.3238;1" values="0;0;42;42" dur="15.75s" repeatCount="indefinite"/><animate attributeName="opacity" keyTimes="0;0.2889;0.3238;1" values="0;0.8;0;0" dur="15.75s" repeatCount="indefinite"/></circle>
+
+  <text x="425.0" y="102" fill="#00d4ff" font-size="22" font-family="monospace" letter-spacing="8"
+        text-anchor="middle" opacity="0">ALL CLEAR
+    <animate attributeName="opacity" calcMode="discrete" keyTimes="0.0000;0.7587;0.9365" values="0;1;0" dur="15.75s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Ship -->
+  <g transform="translate(425.0 180)">
+    <animateTransform attributeName="transform" type="translate" calcMode="spline"
+      keyTimes="0.0000;0.0190;0.1143;0.1524;0.1714;0.2667;0.3048;0.3238;0.4190;0.4571;0.4762;0.5714;0.6095;0.6286;0.7238;0.7619;0.7873;0.8762;1.0000" values="425.0 180;425.0 180;110.0 180;110.0 180;110.0 180;740.0 180;740.0 180;740.0 180;267.5 180;267.5 180;267.5 180;582.5 180;582.5 180;582.5 180;425.0 180;425.0 180;425.0 180;425.0 180;425.0 180" keySplines="0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1"
+      dur="15.75s" repeatCount="indefinite"/>
+    <polygon points="-4,8 0,19 4,8" fill="#ffb020" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.35;0.9" dur="0.25s" repeatCount="indefinite"/>
+    </polygon>
+    <polygon points="0,-16 13,10 0,5 -13,10" fill="#00d4ff" opacity="0.2" filter="url(#hunt-glow)"/>
+    <polygon points="0,-16 13,10 0,5 -13,10" fill="#00d4ff" opacity="0.95"/>
+    <circle cx="0" cy="-2" r="2.4" fill="#ffffff"/>
+  </g>
+</svg>
